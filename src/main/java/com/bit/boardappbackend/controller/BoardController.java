@@ -60,6 +60,7 @@ public class BoardController {
                                        @RequestParam("searchKeyword") String searchKeyword,
                                        @PageableDefault(page = 0, size = 10) Pageable pageable) {
         ResponseDto<BoardDto> responseDto = new ResponseDto<>();
+        
 
         try {
             Page<BoardDto> boardDtoList = boardService.findAll(searchCondtion, searchKeyword, pageable);
